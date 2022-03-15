@@ -51,13 +51,5 @@ ctx.stroke();
 // Paredes
 ctx.beginPath();
 ctx.rect(190,47.5,25,15);
-ctx.moveTo(45, 45);
-ctx.lineTo(45, 40);
-ctx.moveTo(39, 40);
-ctx.lineTo(39, 35);
-ctx.moveTo(30, 35);
-ctx.lineTo(55, 35);
-ctx.moveTo(30, 40);
-ctx.lineTo(55, 40);
 ctx.fill();
 ctx.stroke();
