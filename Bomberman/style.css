@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+
+#quadro{
+    width: 1000px;
+    height: 800px;
+    background-color:#0c5a09;
+    margin: auto;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
