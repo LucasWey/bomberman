@@ -1,5 +1,6 @@
 var canvas = document.getElementById('quadro');
 var ctx = canvas.getContext('2d');
+var img = new Image();
 
 // Fileira vertical/esquerda
 ctx.beginPath();
@@ -48,8 +49,54 @@ ctx.rect(x,30,25,15);
 ctx.fill();
 ctx.stroke();
 
-// Paredes
+// Parede 1
 ctx.beginPath();
 ctx.rect(190,47.5,25,15);
+
+ctx.moveTo(215,53);
+ctx.lineTo(190,53);
+
+ctx.moveTo(215,58);
+ctx.lineTo(190,58);
+
+ctx.moveTo(205,58);
+ctx.lineTo(205,63);
+
+ctx.moveTo(198,53);
+ctx.lineTo(198,58);
+
 ctx.fill();
 ctx.stroke();
+
+// Parede 2
+ctx.beginPath();
+ctx.rect(90,82,25,16);
+
+ctx.moveTo(91,88);
+ctx.lineTo(115,88);
+
+ctx.moveTo(91,93);
+ctx.lineTo(115,93);
+
+ctx.moveTo(99,88);
+ctx.lineTo(99,94);
+
+ctx.moveTo(106,93);
+ctx.lineTo(106,97);
+
+ctx.fill();
+ctx.stroke();
+
+
+// Bomba
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+// Imagem 
+img.onload=function(){
+    ctx.drawImage(img, 33, 8, 25, 20);
+};
+img.src= 'img/bomberman.png';
