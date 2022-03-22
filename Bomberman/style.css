@@ -3,8 +3,6 @@ body{
 }
 
 #quadro{
-    width: 1000px;
-    height: 800px;
     background-color:#0c5a09;
     margin: auto;
     position:absolute;
