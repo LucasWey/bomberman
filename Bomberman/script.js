@@ -1,20 +1,26 @@
 var canvas = document.getElementById('quadro');
 var ctx = canvas.getContext('2d');
 var img = new Image();
+var img2 = new Image();
+var img3 = new Image();
 var gradient = ctx.createRadialGradient(10,50,50,90,0,650);
+
+ctx.shadowColor = "#353836";
+ctx.shadowBlur = 11;
+ctx.shadowOffsetX = 5;
+ctx.shadowOffsetY = 2;
 
 // Fileira vertical/esquerda
 ctx.beginPath();
 for(var y = 0; y <= 800; y=y+73){
     ctx.rect(0,y,80,800);
 }
-ctx.shadowColor = "#353836";
-ctx.shadowBlur = 11;
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 2;
 ctx.fillStyle = 'grey';
 ctx.fill();
 ctx.stroke();
+ctx.closePath();
 
 // Fileira vertical/direita
 ctx.beginPath();
@@ -108,12 +114,21 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(385,280);
-ctx.bezierCurveTo(460, 310, 310, 300, 450, 310);
+ctx.bezierCurveTo(420, 250, 410, 300, 410, 270);
+ctx.fillStyle= "brown";
+ctx.fill();
 ctx.stroke();
 
-
-// Imagem 
+// Imagem bomberman
 img.onload=function(){
     ctx.drawImage(img, 90, 50, 45, 65);
 };
 img.src= 'img/bomberman.png';
+
+// Imagem explosão
+img2.onload=function(){
+    ctx.drawImage(img2, 130, 410, 220, 210);
+};
+img2.src= 'img/explosion.png';
+
+ctx.imageSmoothingEnabled = true;
